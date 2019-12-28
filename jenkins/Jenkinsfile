@@ -1,10 +1,7 @@
 pipeline {
   agent any
     stages {
-      stage ('Checkout git') {
-       git 'https://github.com/narasimhatoleti/pipeline'
-       }
-       stage('Build') {
+      stage('Build') {
        tool name: 'M3', type: 'maven'
        sh 'mvn clean package'
        
