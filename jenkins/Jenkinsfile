@@ -1,13 +1,12 @@
 pipeline {
   agent any
     stages {
-      stage('Build') {
-       tool name: 'M3', type: 'maven'
-        steps {
-          
-          sh 'mvn clean package'
-        }
-       }
+        stage('Build') {
+          steps {
+              tool name: 'M3', type: 'maven'
+              sh 'mvn clean package'
+            }
+          }
     }
 
 } 
