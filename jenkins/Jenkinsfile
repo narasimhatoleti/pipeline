@@ -1,6 +1,5 @@
 pipeline {
   agent any
-  tool name: 'M3', type: 'maven'
     stages {
       stage ('Initialization') {
         steps {
